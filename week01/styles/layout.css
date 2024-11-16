@@ -9,7 +9,7 @@ body {
 
 }
 
-.main-content {
+main {
     background-color: rgb(142, 120, 162);
     grid-column: 1/3;
 }
