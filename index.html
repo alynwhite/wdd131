@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals created by Alexia White. Introduction to Alexia. Began 11/2024.">
     <meta name="author" content="Alexia White">
-    
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,15 +23,18 @@
         
         <section class="card">
             <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Picture of me in Alaska" width="200">
             <div>
-                My name is Alexia White. I am from Beaver, Utah, a place that sometimes feels like the center of the Universe besides when trying to date. I grew up outside of Beaver about 5 to 10 miles in a place called Manderfield which is the birthplace of Philo T. Farnsworth. Philo T. Farnsworth is the person who invented the TV. I have ventured out of Utah and most recently have taken up travel to Alaska to try my hand at fishing and enjoying the beauty there. 
+                <img id="profile-img" src="images/profile.jpg" alt="Picture of me in Alaska" width="200">
+                <p>My name is Alexia White. I am from Beaver, Utah, a place that sometimes feels like the center of the Universe besides when trying to date. I grew up outside of Beaver about 5 to 10 miles in a place called Manderfield which is the birthplace of Philo T. Farnsworth. Philo T. Farnsworth is the person who invented the TV. I have ventured out of Utah and most recently have taken up travel to Alaska to try my hand at fishing and enjoying the beauty there. </p>
             </div>
             <h3>Utah</h3>
             <div>
-                Utah is where the Pioneers finally settled after having been persecuted and driven out of Illinois, Ohio and Missouri. It took 42 years from the time Brigham Young said, "This is the place" to the time Utah became an official state in the United States of America. When the Saints first arrived in the west, the government was a theodemocracy which is where the religious rules is the law by which everything is judged. Eventually, there became seperation between state and church. Recently, the state flag has been updated.
+                <img id="flag-img" src="images/old-new-utah-flag.jpg" alt="New and Old state flag of Utah" width="300">
+                <p >Utah is where the Pioneers finally settled after having been persecuted and driven out of Illinois, Ohio and Missouri. It took 42 years from the time Brigham Young said, "This is the place" to the time Utah became an official state in the United States of America. When the Saints first arrived in the west, the government was a theodemocracy which is where the religious rules is the law by which everything is judged. Eventually, there became seperation between state and church. Recently, the state flag has been updated.</p>
+                
+                
             </div>
-            <img src="images/old-new-utah-flag.jpg" alt="New and Old state flag of Utah" width="200">
+            
         </section>
         <section class="card">
             <h2>Web Dev Resources</h2>
@@ -46,7 +49,7 @@
         </section>
     </main>
     <footer>
-        <p>©<span id="currentyear"> | Alexia White | Utah, USA</span></p>
+        <p>©<span id="currentyear"></span></p>
         <p id="lastModified"></p>
     </footer>
 </body>

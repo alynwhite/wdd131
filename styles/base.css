@@ -49,20 +49,40 @@ header {
 h2 {
     text-align: center;
     background-color: var(--accent2-color);
-    padding: 1rem;
+    padding: 2rem;
+    margin: 0;
+    border-radius: 25px 25px 0 0;
 }
 
 main {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    column-gap: 50px;
+    column-gap: 2px;
+    grid-template-columns: 75% 25%;
 }
 .card{
     border-radius: 25px;
     border: 1px solid var(--accent1-color);
+    margin: 1rem;
 }
-
+.card div{
+    padding: 2rem;
+}
+#flag-img{
+    float: left;
+    padding-right: 10px;
+}
+#profile-img{
+    float: right;
+    padding-left: 10px;
+}
+.card a:hover{
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    font-weight: 500;
+    padding: 3px;
+}
 footer{
     background: linear-gradient(var(--accent2-color), var(--nav-background-color));
     padding: 20px;
@@ -77,4 +97,8 @@ h3{
     text-decoration: none;
     list-style:circle;
     color: black;
+}
+#lastModified{
+    color: var(--accent3-color);
+    font-size: small;
 }
