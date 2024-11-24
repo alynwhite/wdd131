@@ -21,30 +21,60 @@
     font-family: "Rubik", sans-serif;
 }
 
-nav{
+nav {
     display: flex;
-    background-color: var(--nav-background-color);
+    /*background-color: var(--nav-background-color);*/
     justify-content: space-between;
+    border-top: 1px solid;
 }
-nav a{
+
+nav a {
     color: var(--accent3-color);
     text-decoration: none;
     padding: 20px;
 }
-nav a:hover{
+
+nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
     font-weight: 600;
 }
-header{
-    background-color: var(--accent2-color);
+
+header {
+    background: linear-gradient(var(--accent2-color), var(--nav-background-color));
+    padding: 10px;
+    text-align: center;
 }
 
-h2{
+h2 {
+    text-align: center;
     background-color: var(--accent2-color);
     padding: 1rem;
 }
 
-main{
-    width: 1080px;
+main {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    column-gap: 50px;
+}
+.card{
+    border-radius: 25px;
+    border: 1px solid var(--accent1-color);
+}
+
+footer{
+    background: linear-gradient(var(--accent2-color), var(--nav-background-color));
+    padding: 20px;
+    text-align: center;
+}
+h3{
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.card li, a{
+    text-decoration: none;
+    list-style:circle;
+    color: black;
 }
