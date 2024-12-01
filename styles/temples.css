@@ -1,0 +1,38 @@
+body {
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+header, main, footer{
+    margin: 0 auto;
+    max-width: 800px;
+    
+}
+header, footer{
+    background-color: rgb(21, 76, 73);
+    color: white;
+}
+nav ul{
+    display: flex;
+
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+figure{
+    padding: 5px;
+    margin: auto;
+    
+}
+figure img{
+    width: 350px;
+}
