@@ -49,6 +49,10 @@ footer{
     height: auto;
     margin: 0 auto;
 }
+#sectionweather{
+    display: grid;
+    grid-template: 1fr;
+}
 h1{
     background-color: var(--primary-color);
     padding: 10px;
