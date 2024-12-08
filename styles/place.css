@@ -5,16 +5,31 @@
     --accent3-color: #FFB81D;
 
 
-    --overal-background-color: #F7F9FB;
+    --overal-background-color: #FFFFFF;
+    --font-color-with-primary: #FFFFFF;
 }
 .hero img{
     width: 100%;
     height: auto;
 }
+header, footer, h1, h2{
+    text-align: center;
+}
 header{
     background-color: var(--primary-color);
-    color: var(--accent1-color)
+    color: var(--font-color-with-primary);
 }
-section{
-    background-color: var(--accent1-color);
+table{
+    width: 50%;
+}
+
+td label{
+    font-weight: bold;
+}
+picture{
+    background-color: var(--accent2-color);
+}
+footer{
+    background-color: var(--primary-color);
+    color: var(--font-color-with-primary);
 }

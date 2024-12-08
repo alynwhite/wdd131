@@ -1,8 +1,9 @@
 @media screen and (min-width: 500px){
-    h2::after{
-        content: ❄️;
+    *{
+        max-width: 1500px;
     }
-   *{
-    max-width: 1500px;
-   }
+    h2{
+        background-color: var(--accent3-color);
+        padding: 10px;
+    }
 }

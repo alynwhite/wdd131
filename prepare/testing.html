@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with Labels</title>
+  <style>
+    /* Basic table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Example Table with Labels</h2>
+
+  <table class="table">
+    <tr>
+      <td><label for="item1">Item 1</label></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><label for="item2">Item 2</label></td>
+      <td><input type="text" id="item2" value="Value 2"></td>
+    </tr>
+    <tr>
+      <td><label for="item3">Item 3</label></td>
+      <td><input type="text" id="item3" value="Value 3"></td>
+    </tr>
+  </table>
+
+</body>
+</html>
