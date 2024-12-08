@@ -7,6 +7,7 @@
 
     --overal-background-color: #FFFFFF;
     --font-color-with-primary: #FFFFFF;
+    --section-background: rgb(255, 255, 255, 0.3);
 }
 *{
     font-family: "Nunito Sans", sans-serif;
@@ -19,8 +20,9 @@ header, footer, h1, h2{
     text-align: center;
 }
 header{
-    background-color: var(--primary-color);
+    background-color: var(--accent2-color);
     color: var(--font-color-with-primary);
+    padding-bottom: 1px;
 }
 table{
     width: 50%;
@@ -47,3 +49,9 @@ footer{
     height: auto;
     margin: 0 auto;
 }
+h1{
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+
