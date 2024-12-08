@@ -6,4 +6,10 @@
         background-color: var(--accent3-color);
         padding: 10px;
     }
+    #svgimg{
+        display: none;
+    }
+    #weather::after{
+        content: " 🌥️";
+    }
 }
