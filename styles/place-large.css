@@ -16,7 +16,15 @@
         top:0;
         left: 0;
         z-index: 2;
-        width: ;
+    }
+    #sectionweather{
+        bottom: 0;
+        right: 0;
+        z-index: 9;
+    }
+    table{
+        display: flex;
+        justify-content: center;
     }
     picture{
         position: relative;
