@@ -42,3 +42,8 @@ footer{
     background-color: var(--primary-color);
     color: var(--font-color-with-primary);
 }
+#svgimg{
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+}
