@@ -1,9 +1,20 @@
-h1{
-    background-color: rgb(30, 255, 0);
+:root {
+    --primary-color: #071d49;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #AA0200;
+    --accent3-color: #FFB81D;
+
+
+    --overal-background-color: #F7F9FB;
+}
+.hero img{
+    width: 100%;
+    height: auto;
 }
 header{
-    background-color: blue;
+    background-color: var(--primary-color);
+    color: var(--accent1-color)
 }
-footer{
-    background-color: brown;
+section{
+    background-color: var(--accent1-color);
 }
