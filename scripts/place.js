@@ -4,3 +4,6 @@ const today = new Date();
 
 currentyear.innerHTML = `<span>${today.getFullYear()}  | Alexia White | Utah, USA</span>  `;
 lastModified.innerHTML = `Last Modified: ${document.lastModified}`; 
+
+const wind = 20;
+const temperature = 29;

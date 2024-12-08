@@ -8,6 +8,9 @@
     --overal-background-color: #FFFFFF;
     --font-color-with-primary: #FFFFFF;
 }
+*{
+    font-family: "Nunito Sans", sans-serif;
+}
 .hero img{
     width: 100%;
     height: auto;
@@ -33,6 +36,7 @@ td:nth-child(2){
 }
 picture{
     background-color: var(--accent2-color);
+    padding-bottom: 10px;
 }
 footer{
     background-color: var(--primary-color);
