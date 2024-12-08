@@ -7,27 +7,48 @@
     <meta name="description" content="WDD 131 - HTML page created to work on accumulation of week 3.">
     <meta name="author" content="Alexia White">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>Alaska</h1>
     </header>
     <main>
         <div class="hero">
-            <picture></picture>
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-small.webp" alt="Bears in Alaska"  width="1500px" height="750px">
+            </picture>
         </div>
-        <section>
-            <h2>
-                <li></li>
-            </h2>
+        <!-- <section>
+            <h2>Data</h2>
+            <ul>
+                <li>Area: </li>
+                <li>Population: </li>
+                <li>Capital: </li>
+                <li>Languages: </li>
+                <li>Currency: </li>
+                <li>Time Zone: </li>
+                <li>Calling Code: </li>
+                <li>Internet TLD: </li>
+            </ul>
         </section>
         <section>
-            <h2>
-                <li></li>
-            </h2>
-        </section>
+            <h2>Weather</h2>
+            <img src="images/snow.svg" alt="Snow Icon">
+            <ul>
+                <li>Temperature: </li>
+                <li>Conditions: </li>
+                <li>Wind: </li>
+                <li>Wind Chill: </li>
+            </ul>
+        </section> -->
     </main>
-    <footer></footer>
+    <footer>
+        <p>©<span id="currentyear"></span></p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
