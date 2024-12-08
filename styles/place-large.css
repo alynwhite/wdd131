@@ -13,13 +13,14 @@
         content: " 🌥️";
     }
     #sectiondata{
-        top:0;
-        left: 0;
+        
+        top:15%;
+        left: 5%;
         z-index: 2;
     }
     #sectionweather{
-        bottom: 0;
-        right: 0;
+        bottom: 40%;
+        right: 5%;
         z-index: 9;
     }
     table{
@@ -33,5 +34,8 @@
         background-color: var(--section-background);
         position: absolute;
         
+    }
+    section h2{
+        width: 80%;
     }
 }
