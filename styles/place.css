@@ -21,10 +21,15 @@ header{
 }
 table{
     width: 50%;
+    margin: 20px auto;
 }
-
-td label{
+td:nth-child(1){
+    padding-right: 10px;
     font-weight: bold;
+    text-align: right;
+}
+td:nth-child(2){
+    text-align: left;
 }
 picture{
     background-color: var(--accent2-color);
