@@ -1,0 +1,12 @@
+img{
+    display: block;
+    margin: 0 auto;
+}
+h1, footer{
+    text-align: center;
+    background-color: beige;
+    padding: 20px;
+}
+body{
+    background-color: rgb(216, 216, 183);
+}
