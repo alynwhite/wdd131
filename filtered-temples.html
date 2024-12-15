@@ -16,21 +16,24 @@
 <body>
     <header>
         <h1>Temples Album</h1>
+        <!-- <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div> -->
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li> 
-                <li><a href="#">New</a></li> 
-                <li><a href="#">Large</a></li> 
-                <li><a href="#">Small</a> </li> 
+                <li><a href="#" onclick="oldTemples(1900)">Old</a></li> 
+                <li><a href="#" onclick="newTemples()">New</a></li> 
+                <li><a href="#" onclick="largeTemples()">Large</a></li> 
+                <li><a href="#" onclick="smallTemples()">Small</a></li> 
+                <li><a href="#" onclick="originalTemples()">Home</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h2 id="current-selection-header">Home</h2>
-        <figure>
-            <img src="images/tallahase.jpg">
-            <figcaption>Tallahassee Florida</figcaption>
+        <div class="temple-grid"></div>
         
     </main>
     <footer>

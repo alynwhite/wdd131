@@ -14,25 +14,9 @@ header, footer{
 }
 nav ul{
     display: flex;
-
-}
-nav ul li{
-    list-style: none;
-}
-nav ul li a{
-    text-decoration: none;
-    color: white;
 }
 main{
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
-}
-figure{
-    padding: 5px;
-    margin: auto;
-    
-}
-figure img{
-    width: 350px;
 }

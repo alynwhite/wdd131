@@ -63,7 +63,7 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-        templeName: "St. George Utah Temple",
+        templeName: "St. George Utah",
         location: "St. Georege, Utah",
         dedicated: "1877, January, 1 ",
         area: 143969,
@@ -71,14 +71,14 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-40449.jpg"
     },
     {
-        templeName: "Bern Switzerland Temple",
+        templeName: "Bern Switzerland",
         location: "Zollikofen, Switzerland",
         dedicated: "1955, September, 11 ",
         area: 35456,
         imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-54641.jpg"
     },
     {
-        templeName: "Vancouver British Columbia Temple",
+        templeName: "Vancouver British Columbia",
         location: "Langley, British Coumbia, Canada",
         dedicated: "2010, May, 2 ",
         area: 28165,
@@ -86,3 +86,115 @@ const temples = [
     },
     // Add more temple objects here...
   ];
+ 
+//   createCard(temples);
+
+//   function createCard(temples){
+//     temples.forEach(temple=>{
+//         let card = document.createElement("section");
+//         let templename = document.createElement("h3");
+//         let templelocation = document.createElement("p");
+//         let templededicated = document.createElement("p");
+//         let templearea = document.createElement("p");
+//         let templeimage = document.createElement("img");
+
+//         // templeName: "Vancouver British Columbia Temple",
+//         // location: "Langley, British Coumbia, Canada",
+//         // dedicated: "2010, May, 2 ",
+//         // area: 28165,
+//         // imageUrl:
+
+//         templename.textContent = temple.templeName;
+//         templelocation.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+//         templededicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+//         templearea.innerHTML = `<span class="label">Area:</span> ${temple.area}`;
+//         templeimage.setAttribute("src", temple.imageUrl);
+//         templeimage.setAttribute("alt", `${temple.templeName} Temple`);
+//         templeimage.setAttribute("loading", "lazy");
+//         templeimage.setAttribute("width", 400);
+//         templeimage.setAttribute("height", 200)
+
+//         card.appendChild(templename);
+//         card.appendChild(templelocation);
+//         card.appendChild(templededicated);
+//         card.appendChild(templearea);
+//         card.appendChild(templeimage);
+
+//         document.querySelector(".temple-grid").appendChild(card);
+
+//     })
+//   }
+
+createCard(temples);
+
+  function createCard(templeFilter){
+    document.querySelector(".temple-grid").innerHTML = "";
+    templeFilter.forEach(temple=>{
+        let card = document.createElement("section");
+        let templename = document.createElement("h3");
+        let templelocation = document.createElement("p");
+        let templededicated = document.createElement("p");
+        let templearea = document.createElement("p");
+        let templeimage = document.createElement("img");
+
+        // templeName: "Vancouver British Columbia Temple",
+        // location: "Langley, British Coumbia, Canada",
+        // dedicated: "2010, May, 2 ",
+        // area: 28165,
+        // imageUrl:
+
+        templename.textContent = temple.templeName;
+        templelocation.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        templededicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        templearea.innerHTML = `<span class="label">Area:</span> ${temple.area}`;
+        templeimage.setAttribute("src", temple.imageUrl);
+        templeimage.setAttribute("alt", `${temple.templeName} Temple`);
+        templeimage.setAttribute("loading", "lazy");
+        templeimage.setAttribute("width", 400);
+        templeimage.setAttribute("height", 200)
+
+        card.appendChild(templename);
+        card.appendChild(templelocation);
+        card.appendChild(templededicated);
+        card.appendChild(templearea);
+        card.appendChild(templeimage);
+
+        document.querySelector(".temple-grid").appendChild(card);
+
+    })
+  }
+//  Old - temples built before 1900
+// New - temples built after 2000
+// Large - temples larger than 90000 square feet
+// Small - temples smaller than 10000 square feet
+// Home - displays all the temples stored in the array.
+
+  function originalTemples(){
+    createCard(temples);
+  }
+  function newTemples(){
+    const newtemple = temples.filter(temple => {
+        const newyear = temple.dedicated.match(/\d{4}/);
+        return newyear && parseInt(newyear[0]) > 2000;
+    });
+    createCard(newtemple);
+    // console.log(newtemple);
+  }
+
+  function smallTemples(){
+    const smalltemple = temples.filter(temple => temple.area < 10000);
+    createCard(smalltemple);
+  }
+
+  function largeTemples(){
+    const smalltemple = temples.filter(temple => temple.area > 90000);
+    createCard(smalltemple);
+  }
+  function oldTemples(){
+    const oldtemple = temples.filter(temple => {
+        const oldyear = temple.dedicated.match(/\d{4}/);
+        return oldyear && parseInt(oldyear[0]) < 1900;
+    });
+    createCard(oldtemple);
+    // console.log(newtemple);
+  }
