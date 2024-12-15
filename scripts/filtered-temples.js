@@ -5,6 +5,10 @@ const today = new Date();
 currentyear.innerHTML = `<span>${today.getFullYear()}  | Alexia White | Utah, USA</span>  `;
 lastModified.innerHTML = `Last Modified: ${document.lastModified}`; 
 
+function toggleNav() {
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');  // Toggle the 'active' class on the nav element
+}
 const temples = [
     {
       templeName: "Aba Nigeria",
@@ -84,6 +88,20 @@ const temples = [
         area: 28165,
         imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/vancouver-british-columbia-temple/vancouver-british-columbia-temple-3285.jpg"
     },
+    {
+      templeName: "Anchorage Alaska",
+      location: "Anchorage, Alaska",
+      dedicated: "1999, January, 9 ",
+      area: 11937,
+      imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/anchorage-alaska-temple/anchorage-alaska-temple-44885.jpg"
+    },
+    {
+    templeName: "Paris France",
+    location: "Le Chesnay, France",
+    dedicated: "2017, May, 21 ",
+    area:44175,
+    imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2054.jpg"
+  },
     // Add more temple objects here...
   ];
  
@@ -150,8 +168,8 @@ createCard(temples);
         templeimage.setAttribute("src", temple.imageUrl);
         templeimage.setAttribute("alt", `${temple.templeName} Temple`);
         templeimage.setAttribute("loading", "lazy");
-        templeimage.setAttribute("width", 400);
-        templeimage.setAttribute("height", 200)
+        templeimage.setAttribute("width", "400px");
+        templeimage.setAttribute("height", "200px");
 
         card.appendChild(templename);
         card.appendChild(templelocation);

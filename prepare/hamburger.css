@@ -1,0 +1,66 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hamburger {
+    display: none;  /* Hidden by default on desktop */
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    padding: 10px 20px;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* When the navigation menu is hidden (on small screens) */
+  .nav.active {
+    display: block;  /* Makes the navigation visible */
+  }
+  
+  /* Mobile styles */
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;  /* Show the hamburger menu button on mobile */
+    }
+  
+    .nav {
+      display: none;  /* Hide the navigation menu by default on mobile */
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav li {
+      width: 100%;
+      padding: 15px 0;
+      border-top: 1px solid #444;
+    }
+  }
+  

@@ -4,16 +4,69 @@ body {
     text-align: center;
 }
 header, footer{
-    background-color: rgb(21, 76, 73);
-    color: white;
-}
-nav ul{
-    display: flex;
+    background-color: #154c49;
+    color: #ffffff;
 }
 main{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
     margin: 0 auto;
-    max-width: 850px;
+    max-width: 800px;
 }
+.temple-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+div section{
+    border: 1px solid #154c49;
+    background-color: #DCE2E2;
+}
+.label{
+    font-size: small;
+    font-weight: 500;
+    color: #000000
+}
+p{
+    font-size: small;
+}
+img{
+    object-fit: contain;
+}
+
+nav {
+    display: none;
+    justify-content: space-around;
+    background-color: #154c49;
+  }
+nav ul {
+    list-style: none;
+  }
+  
+nav a {
+    color: white;
+    text-decoration: none;
+  }
+nav a:hover{
+    background-color: #DCE2E2;
+    color: #154c49;
+    font-weight: bold;
+    padding: 0 40px;
+}
+
+/* Style the hamburger icon */
+.hamburger {
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    display: block; /* Show hamburger icon on mobile */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+
+  /* Toggle visibility when the menu is active */
+  nav.active {
+    display: flex; /* Show navigation when active */
+  }
