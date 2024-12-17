@@ -29,7 +29,7 @@ function displayList(item) {
     let li = document.createElement('li');
     let deleteButton = document.createElement('button');
     
-    li.textContent = item; // Use the item parameter (chapter)
+    li.textContent = item;
     deleteButton.textContent = '❌';
     deleteButton.classList.add('delete');
     
@@ -38,9 +38,9 @@ function displayList(item) {
   
     // Event listener for the delete button
     deleteButton.addEventListener('click', function () {
-      li.remove(); // Remove the <li> from the DOM
-      deleteChapter(item); // Remove from the array and update localStorage
-      inputChapter.focus(); // Set focus back to the input
+      li.remove(); 
+      deleteChapter(item); 
+      inputChapter.focus();
     });
   }
 // Update the localStorage with the current chaptersArray
@@ -55,7 +55,7 @@ function getChapterList() {
   function deleteChapter(chapter) {
     const index = chaptersArray.indexOf(chapter);
     if (index !== -1) {
-      chaptersArray.splice(index, 1); // Directly remove the chapter from the array
+      chaptersArray.splice(index, 1); 
       //save to localstorage(array)
       setChapterList();
     }
