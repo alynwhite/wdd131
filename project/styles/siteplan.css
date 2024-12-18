@@ -1,0 +1,36 @@
+/* #01796F(Pine Green)
+#FFB84D(Rich Amber
+#F4A261(Sandy Beige) */
+/* 
+6B8E23 (Moss Green)
+#8B4513 (Warm Brown)
+
+#7B3F00 Cinnamon Red
+#D8BFD8 Light Tan
+
+#D2691E Cedar Wood
+
+i like this one
+Deep Evergreen (#006400)
+Soft Beige (#F0E6D2)
+
+more of a sage green
+Moss Green (#758E67)
+Warm White (#FFFAF0)
+
+*/
+h1, h2{
+    background-color: #006400;
+    color:#FFFAF0;
+}
+h3{
+    color:rgb(100, 54, 54);
+    background-color: #F0E6D2;
+}
+main{
+    color: black;
+    background-color: #F0E6D2;
+}
+/* main{
+    background-color: #F4A261;
+} */
