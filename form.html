@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Alexia White</title>
+    <meta name="description" content="WDD 131 - HTML page created to work on accumulation of week 5 for forms.">
+    <meta name="author" content="Alexia White">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Product Review</h1>
+        <form action="review.html" method="get">
+
+            <!-- Dropdown menu -->
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- The options will be populated dynamically by JavaScript -->
+            </select>
+            <hr>
+
+            <!-- Radio Buttons -->
+            <label id="overall-rating">Overall Rating</label>
+            <!-- one star -->
+            <input type="radio" id="one-star" value="1" required>
+            <label for="one-star">☆</label>
+
+            <!-- two star -->
+            <input type="radio" id="two-star" value="2" required>
+            <label for="two-star">☆☆</label>
+
+            <!-- three star -->
+            <input type="radio" id="three-star" value="3" >
+            <label for="three-star">☆☆☆</label>
+
+            <!-- four star -->
+            <input type="radio" id="four-star" value="4" >
+            <label for="four-star">☆☆☆☆</label>
+
+            <!-- five star -->
+            <input type="radio" id="five-star" value="5" >
+            <label for="five-star">☆☆☆☆☆</label>
+           <hr>
+
+           <!-- Date of Installation -->
+            <label for="installation-date">Date of Installation:</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+            <hr>
+
+            <!-- Checkbox: useful fetures -->
+            <label>Which features did you find useful in the product?(check all that apply)</label>
+            <!-- feature 1 -->
+            <input type="checkbox" id="checkbox1" name="features" value="Durability"><label for="checkbox1">Durability</label>
+
+            <!-- feature 2 -->
+            <input type="checkbox" id="checkbox2" name="features" value="Ease of Use"><label for="checkbox2">Ease of Use</label>
+
+            <!-- feature 3 -->
+            <input type="checkbox" id="checkbox3" name="features" value="Performance"><label for="checkbox3">Performance</label>
+
+            <!-- feature 4 -->
+            <input type="checkbox" id="checkbox4" name="features" value="Quality"><label for="checkbox4">Design</label>
+            <hr>
+
+            <!-- Written Review(Optional) -->
+            <label for="written-review">Written Review (optional)</label>
+            <textarea id="written-review" name="review"></textarea>
+            <hr>
+
+            <label for="user-name">Your Name (optional)</label>
+            <input type="text" id="user=name" name="userName">
+            <hr>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span></p>
+        <p id="lastModified">N/A</p>
+    </footer>
+
+    <datalist id="products">
+        <option>Binoculars</option>
+        <option>Camera</option>
+        <option>Relascope</option>
+        <option>Telescope</option>
+        <option>Spotting Scope</option>
+        <option>Watch</option>
+    </datalist>
+</body>
+</html>
