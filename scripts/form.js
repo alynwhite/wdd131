@@ -43,16 +43,3 @@ products.forEach(product => {
   option.textContent = `${product.name} (Rating: ${product.averagerating})`; // Display product name and rating
   productSelect.appendChild(option);
 });
-
-
-// Get the current review count from localStorage or initialize to 0 if none exists
-let reviewCount = localStorage.getItem('reviewCount');
-if (!reviewCount) {
-    reviewCount = 0;
-}
-document.getElementById('reviewCount').textContent = reviewCount;
-reviewCount = parseInt(reviewCount) + 1;
-localStorage.setItem('reviewCount', reviewCount);
-
-// Update the counter display
-document.getElementById('reviewCount').textContent = reviewCount;
