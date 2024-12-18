@@ -25,15 +25,15 @@
             <!-- The options will be populated dynamically by JavaScript -->
             </select>
             <hr>
-
-            <!-- Radio Buttons -->
+                <!-- <legend>Overall Rating</legend> -->
+                <!-- Radio Buttons -->
             <label id="overall-rating">Overall Rating</label>
             <!-- one star -->
             <input type="radio" id="one-star" value="1" required>
             <label for="one-star">☆</label>
 
             <!-- two star -->
-            <input type="radio" id="two-star" value="2" required>
+            <input type="radio" id="two-star" value="2">
             <label for="two-star">☆☆</label>
 
             <!-- three star -->
@@ -47,6 +47,7 @@
             <!-- five star -->
             <input type="radio" id="five-star" value="5" >
             <label for="five-star">☆☆☆☆☆</label>
+            
            <hr>
 
            <!-- Date of Installation -->
@@ -54,7 +55,7 @@
             <input type="date" id="installation-date" name="installation-date" required>
             <hr>
 
-            <!-- Checkbox: useful fetures -->
+                <!-- Checkbox: useful fetures -->
             <label>Which features did you find useful in the product?(check all that apply)</label>
             <!-- feature 1 -->
             <input type="checkbox" id="checkbox1" name="features" value="Durability"><label for="checkbox1">Durability</label>
@@ -75,7 +76,7 @@
             <hr>
 
             <label for="user-name">Your Name (optional)</label>
-            <input type="text" id="user=name" name="userName">
+            <input type="text" id="user=name" name="user-name">
             <hr>
 
             <input type="submit" value="Post Review">
