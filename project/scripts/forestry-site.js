@@ -4,8 +4,8 @@ function toggleNav() {
     nav.classList.toggle('active');  // Toggle the 'active' class on the nav element
   }
 
-  // Function to load questions from localStorage and display them
-  function displayQuestions() {
+   // Function to load questions from localStorage and display them
+   function displayQuestions() {
     const questionsContainer = document.getElementById('questionsContainer');
     questionsContainer.innerHTML = '<h2>Submitted Questions:</h2>'; // Reset content
 
@@ -21,10 +21,11 @@ function toggleNav() {
             const questionElement = document.createElement('div');
             questionElement.classList.add('question');
             questionElement.innerHTML = `
-                <h3>Question #${index + 1}</h3>
-                <p><strong>Name:</strong> ${question.name}</p>
-                <p><strong>Email:</strong> ${question.email}</p>
-                <p><strong>Message:</strong> ${question.message}</p>
+                <h3>${question.name}</h3>
+                <p>${question.email}</p>
+                <p>${question.message}</p>
+                <button onclick="editQuestion(${index})">Edit</button>
+                <button onclick="deleteQuestion(${index})">Delete</button>
             `;
             questionsContainer.appendChild(questionElement);
         });
@@ -41,7 +42,7 @@ document.getElementById('questionForm').addEventListener('submit', function(even
     const message = document.getElementById('message').value;
 
     // Create an object for the new question
-    const newQuestion = { name, email, message };
+    const newQuestion = { name, email, message, response: '' };
 
     // Retrieve existing questions from localStorage, or initialize an empty array
     const questions = JSON.parse(localStorage.getItem('questions')) || [];
@@ -61,5 +62,28 @@ document.getElementById('questionForm').addEventListener('submit', function(even
     displayQuestions();
 });
 
+// Function to delete a question
+function deleteQuestion(index) {
+    const questions = JSON.parse(localStorage.getItem('questions')) || [];
+    questions.splice(index, 1); // Remove the question at the specified index
+    localStorage.setItem('questions', JSON.stringify(questions));
+    displayQuestions(); // Re-render the questions
+}
+
+// Function to edit a question
+function editQuestion(index) {
+    const questions = JSON.parse(localStorage.getItem('questions')) || [];
+    const question = questions[index];
+
+    // Replace the form values with the question's data
+    document.getElementById('name').value = question.name;
+    document.getElementById('email').value = question.email;
+    document.getElementById('message').value = question.message;
+
+    // Remove the question from the array (we'll add it back after editing)
+    questions.splice(index, 1);
+    localStorage.setItem('questions', JSON.stringify(questions));
+    displayQuestions(); // Re-render the questions
+}
 // Initial call to display the questions when the page loads
 window.onload = displayQuestions;

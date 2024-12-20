@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Your Question</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
@@ -21,7 +22,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 100%;
+            max-width: 400px;
             margin-bottom: 30px;
         }
         h2 {
@@ -61,7 +63,7 @@
             background-color: #45a049;
         }
         .questions-container {
-            width: 80%;
+            width: 100%;
             max-width: 800px;
         }
         .question {
@@ -70,6 +72,43 @@
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 15px;
+        }
+
+        /* Media Queries for different screen sizes */
+        
+        @media screen and (max-width: 768px) {
+            .form-container {
+                padding: 15px;
+                width: 90%;
+            }
+            .questions-container {
+                padding: 15px;
+                width: 90%;
+            }
+            button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+        
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .form-container {
+                padding: 20px;
+                width: 70%;
+            }
+            .questions-container {
+                padding: 20px;
+                width: 70%;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            .form-container {
+                width: 400px;
+            }
+            .questions-container {
+                width: 800px;
+            }
         }
     </style>
 </head>
@@ -120,6 +159,9 @@
                         <p><strong>Name:</strong> ${question.name}</p>
                         <p><strong>Email:</strong> ${question.email}</p>
                         <p><strong>Message:</strong> ${question.message}</p>
+                        <button onclick="editQuestion(${index})">Edit</button>
+                        <button onclick="deleteQuestion(${index})">Delete</button>
+                        <div id="response-${index}"></div>
                     `;
                     questionsContainer.appendChild(questionElement);
                 });
@@ -136,7 +178,7 @@
             const message = document.getElementById('message').value;
 
             // Create an object for the new question
-            const newQuestion = { name, email, message };
+            const newQuestion = { name, email, message, response: '' };
 
             // Retrieve existing questions from localStorage, or initialize an empty array
             const questions = JSON.parse(localStorage.getItem('questions')) || [];
@@ -156,6 +198,29 @@
             displayQuestions();
         });
 
+        // Function to delete a question
+        function deleteQuestion(index) {
+            const questions = JSON.parse(localStorage.getItem('questions')) || [];
+            questions.splice(index, 1); // Remove the question at the specified index
+            localStorage.setItem('questions', JSON.stringify(questions));
+            displayQuestions(); // Re-render the questions
+        }
+
+        // Function to edit a question
+        function editQuestion(index) {
+            const questions = JSON.parse(localStorage.getItem('questions')) || [];
+            const question = questions[index];
+
+            // Replace the form values with the question's data
+            document.getElementById('name').value = question.name;
+            document.getElementById('email').value = question.email;
+            document.getElementById('message').value = question.message;
+
+            // Remove the question from the array (we'll add it back after editing)
+            questions.splice(index, 1);
+            localStorage.setItem('questions', JSON.stringify(questions));
+            displayQuestions(); // Re-render the questions
+        }
         // Initial call to display the questions when the page loads
         window.onload = displayQuestions;
     </script>
