@@ -1,11 +1,13 @@
 :root{
     --primary-color: #F0E6D2;
-    --accent-color-1: #00640;
+    --accent-color-1: #006400;
+    --accent-color-2:#FFFAF0;
 
 }
 body {
     font-family: 'Roboto';
     font-weight: 400;
+    color: black;
 }
 header, main, footer{
     max-width: 800px;
@@ -14,7 +16,14 @@ header, main, footer{
     padding: 1rem;
     background-color:#F0E6D2;
 }
+header, footer{
+    background-color: var(--accent-color-1);
+}
 h1{
+    color: var(--accent-color-2);
+    text-align: center;
+}
+h2{
     color: var(--accent-color-1);
 }
 nav {
