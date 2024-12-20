@@ -32,8 +32,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--accent-color-1);
-  padding: 10px 20px;
   color: var(--accent-color-2);
+  padding: 10px;
 }
 footer {
   text-align: center;
@@ -92,9 +92,9 @@ nav a:hover {
   font-size: 30px;
   padding: 10px;
   cursor: pointer;
-  display: block; /* Show hamburger icon on mobile */
+  display: block;
   position: absolute;
-  top: 15px;
+   top: 15px;
   right: 15px;
 }
 
@@ -186,17 +186,25 @@ button:hover {
   border-radius: 4px;
   margin-top: 10px;
 }
-
-.image-text-container {
-  display: grid;          /* Enable CSS Grid */
-  grid-template-columns: auto 1fr; /* First column (image) auto-sized, second column (text) takes remaining space */
-  gap: 20px;              /* Add space between image and text */
+section ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 0;
+  list-style: none;
 }
 
-.image-text-container img {
-  width: 100%;    /* Make image responsive to the container width */
-  max-width: 300px; /* Set a maximum width to keep the image from being too large */
-  height: auto;    /* Maintain the aspect ratio */
+section ul li {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section ul li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -220,7 +228,7 @@ button:hover {
   }
 
   nav {
-      display: flex;
+      display: none;
       flex-direction: column;
       width: 100%;
   }
@@ -293,25 +301,4 @@ button:hover {
   header {
       display: flex;
   }
-
-section ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-}
-
-section ul li {
-    background-color: #fff;
-    padding: 12px;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section ul li:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
 }
