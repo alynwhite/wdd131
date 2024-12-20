@@ -1,3 +1,8 @@
+:root{
+    --primary-color: #F0E6D2;
+    --accent-color-1: #00640;
+
+}
 body {
     font-family: 'Roboto';
     font-weight: 400;
@@ -5,22 +10,26 @@ body {
 header, main, footer{
     max-width: 800px;
     margin: 1rem auto;
-    border: 1px solid rgba(13, 93, 213, 0.293);
+    border: 1px solid #006400;
     padding: 1rem;
-    background-color: rgba(72, 151, 190, 0.449);
+    background-color:#F0E6D2;
+}
+h1{
+    color: var(--accent-color-1);
 }
 nav {
     display: none;
     justify-content: space-around;
-    background-color: #154c49;
+    background-color: #006400;
   }
 nav ul {
     list-style: none;
   }
   
 nav a {
-    color: white;
+    color: #FFFAF0;
     text-decoration: none;
+    font-weight: 400;
   }
 nav a:hover{
     background-color: #DCE2E2;
@@ -44,4 +53,8 @@ nav a:hover{
   /* Toggle visibility when the menu is active */
   nav.active {
     display: flex; /* Show navigation when active */
+  }
+  a{
+    text-decoration: none;
+    color: var(--accent-color-1);
   }

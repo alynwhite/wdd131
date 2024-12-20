@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
@@ -32,4 +32,52 @@ h2 {
 }
 .question p {
     margin: 5px 0;
+} */
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
 }
+header, main, footer{
+    max-width: 800px;
+    margin: 1rem auto;
+    border: 1px solid rgba(13, 93, 213, 0.293);
+    padding: 1rem;
+    background-color: rgba(72, 151, 190, 0.449);
+}
+nav {
+    display: none;
+    justify-content: space-around;
+    background-color: #154c49;
+  }
+nav ul {
+    list-style: none;
+  }
+  
+nav a {
+    color: white;
+    text-decoration: none;
+  }
+nav a:hover{
+    background-color: #DCE2E2;
+    color: #154c49;
+    font-weight: bold;
+    padding: 0 40px;
+}
+
+/* Style the hamburger icon */
+.hamburger {
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    display: block; /* Show hamburger icon on mobile */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+
+  /* Toggle visibility when the menu is active */
+  nav.active {
+    display: flex; /* Show navigation when active */
+  }
